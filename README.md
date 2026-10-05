@@ -28,15 +28,9 @@
 ### 🪄 One-Liner Magic (Recommended)
 
 ```bash
-git clone https://github.com/Praveensenpai/imgbb-tui.git
-cd imgbb-tui && cargo build --release && install -Dm 755 target/release/imgbb-tui ~/.local/bin/imgbb-tui
-```
-
-Then run:
-
-```bash
-imgbb-tui
-```
+curl -fsSL https://raw.githubuser [!NOTE]
+> Pass options through `bash -s --`, e.g. install a specific tag or prefix:
+> `curl -fsSL .../install.sh | bash -s -- --version v0.1.0 --prefix /usr/local/bin`
 
 ### 🛠️ Building From Source
 
@@ -45,6 +39,12 @@ git clone https://github.com/Praveensenpai/imgbb-tui.git
 cd imgbb-tui
 cargo build --release
 ./target/release/imgbb-tui
+```
+
+Or let the installer handle it:
+
+```bash
+./scripts/install.sh --from-source
 ```
 
 > [!TIP]
