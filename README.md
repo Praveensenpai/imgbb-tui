@@ -28,24 +28,19 @@
 ### 🪄 One-Liner Magic (Recommended)
 
 ```bash
-curl -fsSL https://raw.githubuser [!NOTE]
-> Pass options through `bash -s --`, e.g. install a specific tag or prefix:
-> `curl -fsSL .../install.sh | bash -s -- --version v0.1.0 --prefix /usr/local/bin`
+curl -sSL -H "Accept: application/vnd.github.v3.raw" https://api.github.com/repos/Praveensenpai/imgbb-tui/contents/install.sh | bash
+```
 
 ### 🛠️ Building From Source
 
 ```bash
 git clone https://github.com/Praveensenpai/imgbb-tui.git
 cd imgbb-tui
-cargo build --release
-./target/release/imgbb-tui
+chmod +x install.sh
+./install.sh
 ```
 
-Or let the installer handle it:
-
-```bash
-./scripts/install.sh --from-source
-```
+The installer downloads the prebuilt Linux x86_64 release, verifies its SHA256, and installs to `~/.local/bin`. If no compatible asset is available, it falls back to a local source build.
 
 > [!TIP]
 > **Requirements:** Linux with Wayland, plus `wl-clipboard` (`wl-paste` / `wl-copy`).

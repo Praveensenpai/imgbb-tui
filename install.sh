@@ -4,8 +4,7 @@
 # Downloads the latest prebuilt Linux x86_64 release, verifies its checksum,
 # and installs the binary to ~/.local/bin.
 #
-# Usage:
-#   curl -fsSL https://raw.githubusercontent.com/Praveensenpai/imgbb-tui/main/scripts/install.sh | bash
+# Usage:\n#   curl -sSL -H "Accept: application/vnd.github.v3.raw" https://api.github.com/repos/Praveensenpai/imgbb-tui/contents/install.sh | bash
 
 set -euo pipefail
 IFS=$'\n\t'
